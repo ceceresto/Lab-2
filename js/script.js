@@ -1,19 +1,22 @@
 console.log("SubmitBtn");
 
-// || Theme Toggle
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Toggle Light Mode";
+    } else {
+        themeToggle.textContent = "ToggleDark Mode";
+    }
 });
 
-// || Show/Hide Skills
 const toggleSkills = document.getElementById("toggleSkills");
 const skillsSection = document.getElementById("skillsSection");
 toggleSkills.addEventListener("click", function () {
     skillsSection.classList.toggle("hidden");
 });
 
-// || Form Submission
 const submitBtn = document.getElementById("SubmitBtn");
 submitBtn.addEventListener("click", function (event) {
     event.preventDefault();
