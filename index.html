@@ -5,109 +5,116 @@
     <title>Personal Online CV</title>
 </head>
 <body>
+
     <header>
-<section>
-    <h1>Kris Margette C. Cabangbang</h1>
-    <p class="subtitle"> IT Student | Web Systems and Technologies </p>
-</header>
+        <button id="themeToggle">Toggle Dark Mode</button>
+        <h1>Kris Margette C. Cabangbang</h1>
+        <p class="subtitle">IT Student | Web Systems and Technologies</p>
+    </header>
 
-<main>
-    <div class="container">
-    <section class="card">
-    <section>
-        <h2>About Me</h2>
-        <img src="images/profile.jpg" alt="Profile photo">
-        <p>Email:
-            <a href="mailto:cabangbang.krismargette7@gmail.com">cabangbang.krismargette7@gmail.com</a><br>
-            GitHub:
-            <a href="https://github.com" target="_blank">github.com</a>
-        </p>
-        <p>IT student skilled in modular web/app design, Java GUI, and workflow optimization.</p>
-        <p>Experienced in Git/GitHub version control and troubleshooting, with a creative edge in branding and playlist curation. Combines technical precision with clear, user-focused communication.</p>
-    </section>
-</section>
-   <section>
-    <section class="card">
-    <h2>Skills</h2>
-    <ul>
-        <li>Modular Web and App Design</li>
-        <li>Java GUI Development</li>
-        <li>Workflow optimization and process mapping</li>
-        <li>SQL and local dev environment optimization (Laragon)</li>
-        <li>Creative branding and playlist curation</li>
-        <li>Clear, user-focused communication</li>
-    </ul>
-    </section>
-</section>
-    <section class="card">
-   <section class="education">
-    <h2>Education</h2>
-   <section>
-    <head>
-    <table border="1" cellpadding="3" cellspacing="0">
-        <tr>
-            <th>Program</th>
-            <th>Institution</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <th>Bachelor of Science in Information Technology</th>
-            <td>USTP – CDO Campus</td>
-            <td>2023-2028</td>
-        </tr>
-        <tr>
-            <th>Senior High School</th>
-            <td>Gusa Regional Science High School</td>
-            <td>2023</td>
-        </tr>
-        <tr>
-            <th>Junior High School</th>
-            <td>St. Mary's Academy</td>
-            <td>2021</td>
-        </tr>
-        <tr>
-            <th>Elementary School</th>
-            <td>St. Mary's Academy</td>
-            <td>2017</td>
-        </tr>
-    </table>
-    </section>
-</section>
-    <section>
-        <section class="card">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Name"><br><br>
-            <input type="email" placeholder="Email"><br><br>
-            <textarea placeholder="Message"></textarea><br><br>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    </section>
-</section>
+    <main>
+        <div class="container">
 
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-<ul>
-    <li>Web Development</li>
-    <ul>
-        <li>Frontend</li>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        <ul>
-        <li>Backend</li>
-    </ul> 
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile photo">
+                <p>
+                    Email: <a href="mailto:cabangbang.krismargette7@gmail.com">cabangbang.krismargette7@gmail.com</a><br>
+                    GitHub: <a href="https://github.com" target="_blank">github.com</a>
+                </p>
+                <p>IT student skilled in modular web/app design, Java GUI, and workflow optimization.</p>
+                <p>Experienced in Git/GitHub version control and troubleshooting, with a creative edge in branding and playlist curation. Combines technical precision with clear, user-focused communication.</p>
+            </section>
 
-</div>
-</section>
-</main>
-<footer>
-    <p style="text-align: center;">&copy; 2026 Your Name. All rights reserved.</p>
-</footer>
+
+            <button id="toggleSkills">Show/Hide Skills</button>
+            <section class="card" id="skillsSection">
+                <h2>Skills</h2>
+                <ul style="list-style-type: none;">
+                    <li>Modular Web and App Design</li>
+                    <li>Java GUI Development</li>
+                    <li>Workflow optimization and process mapping</li>
+                    <li>SQL and local dev environment optimization (Laragon)</li>
+                    <li>Creative branding and playlist curation</li>
+                    <li>Clear, user-focused communication</li>
+                </ul>
+            </section>
+
+
+            <section class="card">
+                <h2>Education</h2>
+                <table border="1" cellpadding="3" cellspacing="0">
+                    <tr>
+                        <th>Program</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td>Bachelor of Science in Information Technology</td>
+                        <td>USTP – CDO Campus</td>
+                        <td>2023-2028</td>
+                    </tr>
+                    <tr>
+                        <td>Senior High School</td>
+                        <td>Gusa Regional Science High School</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>Junior High School</td>
+                        <td>St. Mary's Academy</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Elementary School</td>
+                        <td>St. Mary's Academy</td>
+                        <td>2017</td>
+                    </tr>
+                </table>
+            </section>
+
+
+            <section class="card">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" id="SubmitBtn">Send</button>
+                </form>
+            </section>
+
+
+            <section class="card">
+                <ul style="list-style-type: none;">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+
+
+            <section class="card">
+                <ul style="list-style-type: none;">
+                    <li>Web Development</li>
+                    <ul style="list-style-type: none;">
+                        <li>Frontend</li>
+                        <ul style="list-style-type: none;">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <li>Backend</li>
+                    </ul>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
