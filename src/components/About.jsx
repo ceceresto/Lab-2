@@ -1,6 +1,8 @@
+import Card from "./Card";
+
 function About() {
   return (
-    <section className="card">
+    <Card>
       <h2>About Me</h2>
       <img src="public/images/profile.jpg" alt="Profile photo" />
       <p>
@@ -13,7 +15,7 @@ function About() {
       <p>
         Experienced in Git/GitHub version control and troubleshooting, with a creative edge in branding and playlist curation. Combines technical precision with clear, user-focused communication.
       </p>
-    </section>
+    </Card>
   );
 }
 
