@@ -4,7 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import Card from "./components/card";
+import Card from "./components/Card";
 import './index.css';
 import './images/profile.jpg';
 
