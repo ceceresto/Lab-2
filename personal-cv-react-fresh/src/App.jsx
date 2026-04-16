@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import ContactList from "./components/ContactList";   // ✅ Added import
 import './index.css';
 import './images/profile.jpg';
 
@@ -19,12 +20,12 @@ function App() {
     "Clear, user-focused communication",
   ];
 
-const education = [
-  { year: "2023-2028", program: "Bachelor of Science in Information Technology", school: "USTP – CDO Campus" },
-  { year: "2023", program: "Senior High School", school: "Gusa Regional Science High School" },
-  { year: "2021", program: "Junior High School", school: "St. Mary's Academy" },
-  { year: "2017", program: "Elementary School", school: "St. Mary's Academy" }
-];
+  const education = [
+    { year: "2023-2028", program: "Bachelor of Science in Information Technology", school: "USTP – CDO Campus" },
+    { year: "2023", program: "Senior High School", school: "Gusa Regional Science High School" },
+    { year: "2021", program: "Junior High School", school: "St. Mary's Academy" },
+    { year: "2017", program: "Elementary School", school: "St. Mary's Academy" }
+  ];
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
@@ -34,6 +35,7 @@ const education = [
       <Skills skills={skills} />
       <Education education={education} />
       <Contact />
+      <ContactList />   
       <footer>
         <p style={{ textAlign: "center" }}>
           &copy; 2026 Kris Margette C. Cabangbang. All rights reserved.

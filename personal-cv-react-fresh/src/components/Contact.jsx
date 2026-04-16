@@ -6,13 +6,28 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you ${name}!`);
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  fetch("http://localhost/cv-api/process.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name: name })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.message) {
+        alert(data.message);
+      } else {
+        alert("Unexpected error occurred.");
+      }
+    });
+
+  setName("");
+  setEmail("");
+  setMessage("");
+};
 
   return (
     <Card>

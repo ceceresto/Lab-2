@@ -4,7 +4,7 @@ function About() {
   return (
     <Card>
       <h2>About Me</h2>
-      <img src="public/images/profile.jpg" alt="Profile photo" />
+      <img src="src/images/profile.jpg" alt="Profile photo" />
       <p>
         Email: <a href="mailto:cabangbang.krismargette7@gmail.com">cabangbang.krismargette7@gmail.com</a><br />
         GitHub: <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com</a>
