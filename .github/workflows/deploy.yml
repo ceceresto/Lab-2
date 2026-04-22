@@ -21,7 +21,8 @@ jobs:
           cache: npm
           cache-dependency-path: personal-cv-react-fresh/package-lock.json
       - run: npm install
-      - run: npx vite build        # ← only this line changed
+      - run: chmod +x node_modules/.bin/vite    # ← ADD THIS
+      - run: npx vite build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
