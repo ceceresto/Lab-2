@@ -1,29 +1,45 @@
 name: Deploy React App to GitHub Pages
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 on:
   push:
     branches:
       - main
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 permissions:
   contents: read
   pages: write
   id-token: write
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
+<<<<<<< HEAD
         working-directory: personal-cv-react   # 👈 change if folder name is different
 
     steps:
       - uses: actions/checkout@v4
 
+=======
+        working-directory: personal-cv-react-fresh
+    steps:
+      - uses: actions/checkout@v4
+>>>>>>> main
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+<<<<<<< HEAD
           cache-dependency-path: personal-cv-react/package-lock.json
 
       - run: npm install
@@ -36,3 +52,24 @@ jobs:
           path: personal-cv-react/dist
 
       - uses: actions/deploy-pages@v4
+=======
+          cache-dependency-path: personal-cv-react-fresh/package-lock.json
+      - run: npm ci
+      - run: chmod +x node_modules/.bin/vite
+      - run: npm run build
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: personal-cv-react-fresh/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+>>>>>>> main
